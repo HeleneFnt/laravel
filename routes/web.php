@@ -17,11 +17,13 @@ Route::get('/', function () {
     return view('Homepage');
 });
 
-Route::get('/product', function() {
+Route::get('/products', function() {
     return 'Liste des produits'; });
 
-Route::get('/product/{id}', function() {
-    return 'Fiche du produit {id}'; });
+Route::get('/products/{id}', function($id) {
+    return 'Fiche du produit' . ' '. $id;
+});
 
 Route::get('/cart', function() {
-return 'Panier'; });
+return 'Panier';
+});
